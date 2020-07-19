@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, View, Text, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, View, Text, TouchableOpacity, FlatList, Modal } from 'react-native';
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card';
 
@@ -12,6 +12,12 @@ export default function Home({ navigation }) {
 
 	return (
 		<View style={globalStyles.container}>
+			<Modal visible={true}>
+				<View style={StyleSheet.modalContent}>
+					<Text>Hello from the modal :)</Text>
+				</View>
+			</Modal>
+
 			<FlatList
 				data={reviews}
 				renderItem={({ item }) => (
