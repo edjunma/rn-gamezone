@@ -3,13 +3,17 @@ import React from 'react';
 import Header from '../shared/header';
 import Home from '../screens/home';
 import ReviewDetails from '../screens/reviewDetails';
+import { Image } from 'react-native';
 
 const screens = {
 	Home: {
 		screen: Home,
 		navigationOptions: ({ navigation }) => {
 			return {
-				headerTitle: () => <Header title='GameZone' navigation={navigation} />,
+				headerTitle: () => <Header navigation={navigation} title='Gamezone' />,
+				headerBackground: () => (
+					<Image source={require('../assets/game_bg.png')} style={{ height: 60 }} />
+				),
 			};
 		},
 	},

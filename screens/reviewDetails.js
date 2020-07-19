@@ -13,7 +13,7 @@ export default function ReviewDetails({ navigation }) {
 				<Text>{navigation.getParam('body')}</Text>
 				<View style={styles.rating}>
 					<Text>GameZone rating: </Text>
-					<Image source={require(images.ratings[ratings])} />
+					<Image source={images.ratings[rating]} />
 				</View>
 			</Card>
 		</View>
